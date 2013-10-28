@@ -9,4 +9,19 @@
 
 # Make sure your secret_key_base is kept private
 # if you're sharing your code publicly.
-TemplateTienda::Application.config.secret_key_base = 'bc50893cdcb5ce46ccb1b328b0b356bcb7152ecbe9ec9c677753dd031da5bbbee26a911961f460f1eba85ab350975d1e6e51b5baf73379b44ce16bcaa4c1b1ed'
+require 'securerandom'
+
+def secure_token
+  token_file = Rails.root.join('.secret')
+  if File.exist?(token_file)
+    # Use the existing token.
+    File.read(token_file).chomp
+  else
+    # Generate a new token and store it in token_file.
+    token = SecureRandom.hex(64)
+    File.write(token_file, token)
+    token
+  end
+end
+
+SampleApp::Application.config.secret_key_base = secure_token
