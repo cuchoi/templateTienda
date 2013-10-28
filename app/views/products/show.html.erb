@@ -6,18 +6,18 @@
 </p>
 
 <p>
-  <strong>Price:</strong>
-  <%= @product.price %>
-</p>
-
-<p>
   <strong>Description:</strong>
   <%= @product.description %>
 </p>
 
 <p>
-  <strong>Stock:</strong>
-  <%= @product.stock %>
+  <strong>Category:</strong>
+  <%= @product.category_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @product.user_id %>
 </p>
 
 <%= link_to 'Edit', edit_product_path(@product) %> |
