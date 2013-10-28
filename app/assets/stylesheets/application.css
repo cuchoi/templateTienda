@@ -10,4 +10,14 @@
  *
  *= require_self
  *= require_tree .
+ *= require twitter/bootstrap
+
  */
+
+body {
+padding: 30px;
+}
+
+.navbar {
+margin-bottom: 30px;
+}
