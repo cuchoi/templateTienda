@@ -10,10 +10,10 @@
 <% @products.each do |product| %>
 
     <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
-
-        <a href="#" class="tooltip1 thumbnail" title="<%= product.name %>" data-toggle="tooltip">
+        <a href="<%= product_path(product) %>" class="tooltip1 thumbnail" title="<%= product.name %>" data-toggle="tooltip">
              <img src="http://placehold.it/200x200" alt="<%= product.name %>" class="img-responsive">
         </a>
     </div>
+
 <% end %>
   </div>
