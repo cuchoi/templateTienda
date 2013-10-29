@@ -13,6 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require_tree .
 //= require twitter/bootstrap
+//= require_tree .
+
+$(document).ready(function(){
+	
+$(".tooltip1").tooltip()	
+});
 

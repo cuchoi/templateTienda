@@ -1,56 +1,19 @@
    <div class="jumbotron">
-        <h1>Welcome to my store!</h1>
-        <p>This example!</p>
+        <h1>Bienvenido a Todos somos chefs!</h1>
         <p>
-          <a class="btn btn-lg btn-primary" href="../../components/#navbar">See all products &raquo;</a>
+          <a class="btn btn-lg btn-primary" href="../../components/#navbar">Conoce cómo funcionamos &raquo;</a>
         </p>
       </div>
 
-      <div class="row">
-  <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-   <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-   <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-   <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-   <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-   <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-    <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-   <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
-   <div class="col-sm-6 col-md-2">
-    <a href="#">
-      <img class="img-thumbnail" src="http://placehold.it/171x180">
-    </a>
-  </div>
+<div class="row">
 
-</div>
+<% @products.each do |product| %>
+
+    <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+
+        <a href="#" class="tooltip1 thumbnail" title="<%= product.name %>" data-toggle="tooltip">
+             <img src="http://placehold.it/200x200" alt="<%= product.name %>" class="img-responsive">
+        </a>
+    </div>
+<% end %>
+  </div>
