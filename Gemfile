@@ -18,6 +18,7 @@ gem 'jbuilder', '~> 1.0.2'
 gem "jquery-turbolinks", "~> 2.0.1" #Arreglo de turbolinks
 gem "devise", "~> 3.1.1" #Authentification
 gem "haml", "~> 4.0.3" #HAML
+gem "cancan", "~> 1.6.10"
 
 group :doc do
   gem 'sdoc', '0.3.20', require: false
