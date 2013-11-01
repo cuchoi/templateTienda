@@ -24,5 +24,6 @@ doc/
 .DS_Store
 .idea
 .secret
+vendor/bundle
 
 
