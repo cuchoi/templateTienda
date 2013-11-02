@@ -3,6 +3,8 @@ ruby '2.0.0'
 #ruby-gemset=railstutorial_rails_4_0
 
 gem 'rails', '4.0.0'
+gem "bundler", "~> 1.3.5"
+
 
 group :development do
   gem 'sqlite3', '1.3.8'
@@ -20,6 +22,7 @@ gem "devise", "~> 3.1.1" #Authentification
 gem "haml", "~> 4.0.3" #HAML
 gem "cancan", "~> 1.6.10"
 gem 'rails_admin'
+gem 'bootstrap-sass-rails'
 
 
 group :doc do
@@ -31,7 +34,6 @@ group :production do
   gem 'rails_12factor', '0.0.2'
 end
 
-gem 'bootstrap-sass-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
