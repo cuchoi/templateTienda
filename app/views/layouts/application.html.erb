@@ -30,9 +30,13 @@
          <!--   <li class="<%= 'active' if params[:controller] == 'categories' %>"><%= link_to "Categorias",    '/categories' %></li> -->
           </ul>
           <ul class="nav navbar-nav navbar-right">
-            <li><button type="button" class="botonShoppingCart btn">
+            <li>
+<%= link_to cart_url(current_cart), :class => "linkShoppingCart" do %>
+            <button type="button" class="botonShoppingCart btn">
   <span class="glyphicon glyphicon-shopping-cart"></span>
 </button>
+        <% end %>
+
 </li>
 
              <% if user_signed_in? %>
@@ -83,8 +87,6 @@
 
 <%= yield %>
 
-<p class="notice"><%= notice %></p>
-       <p class="alert"><%= alert %></p>
 
 </div>
 

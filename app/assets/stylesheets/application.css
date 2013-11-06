@@ -26,7 +26,20 @@ margin-bottom: 30px;
 	color: white !important;
 }
 
+.btn-sm{
+	color: white !important;
+}
+
+.btn-xs{
+	color: white !important;
+}
+
 .botonShoppingCart{
 	margin-top: 8px;
 	margin-left: 15px;	
 }
+
+.linkShoppingCart{
+	padding: 0 0 0 0 !important;
+}
+
