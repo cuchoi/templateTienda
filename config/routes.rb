@@ -4,7 +4,7 @@ TemplateTienda::Application.routes.draw do
   resources :carts
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
-  devise_for :users
+  devise_for :users, :controllers => { :sessions => "sessions" }
   get "welcome/index"
   resources :products
 

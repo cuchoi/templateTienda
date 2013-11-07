@@ -1,30 +1,62 @@
 <p id="notice"><%= notice %></p>
 
+<div class="container">
 <h1>Your Cart</h1>
 <br>
+    <div class="row">
+        <div class="col-sm-12 col-md-10 col-md-offset-1">
+
 <table class="table table-hover">
+	<thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th class="text-center">Price</th>
+                        <th class="text-center">Total</th>
+                        <th> </th>
+                    </tr>
+                </thead>
 	<% for item in @cart.cart_items %>
 	<tr>
-		<td><%= item.quantity %>&times; <%= link_to item.product.name, 	item.product %></td>
-		<td class="item_price"><%= number_to_currency(item.total_price) %></td>
-		<td class="hidden-xs">
-		<a class="btn-sm btn-success" href="">
-		<span class="glyphicon glyphicon-plus"></span></a>
-		<a class="btn-sm btn-danger" href="">  <span class="glyphicon glyphicon-minus"></span></a>
+	                        <td class="col-sm-8 col-md-6">
+                        <div class="media">
+                            <a class="thumbnail pull-left hidden-xs" href="#"> <img class="media-object" src="http://icons.iconarchive.com/icons/custom-icon-design/flatastic-2/72/product-icon.png" style="width: 72px; height: 72px;"> </a>
+                            <div class="media-body">
+                                <h4 class="media-heading"><%= link_to item.product.name, 	item.product %></h4>
+                                <span>Status: </span><span class="text-success"><strong>In Stock</strong></span>
+                            </div>
+                        </div></td>
+		<td class="col-sm-1 col-md-1 text-center"><%= item.quantity %>&times;</td>
+		<td class="col-sm-1 col-md-1 text-center"><%= number_to_currency(item.product.price) %></td>
+		<td class="col-sm-1 col-md-1 text-center"><%= number_to_currency(item.quantity * item.product.price) %></td>
+
+		<td class="hidden-xs col-sm-1 col-md-2">
+
+		<%= link_to item, :method => :delete, :class => "btn-sm btn-danger" do %> 
+		 <span class="glyphicon glyphicon-remove"></span> Remove
+		 <% end %>
 		</td>
 	
-		<td class="hidden-md hidden-lg hidden-sm vissible-xs"><a class="btn-xs btn-success" href="">
-		<span class="glyphicon glyphicon-plus"></span></a>
-		<a class="btn-xs btn-danger" href="">  <span class="glyphicon glyphicon-minus"></span></a>
+		<td class="col-xs-2 hidden-md hidden-lg hidden-sm vissible-xs">
+		
+		<%= link_to item, :method => :delete, :class => "btn-xs btn-danger" do %> 
+		 <span class="glyphicon glyphicon-remove"></span> 
+		 <% end %>
+
 		</td>
 	</tr>
 	<% end %>
           
 	<tr>
 		<td></td>
-		<td><h4>Total: <%= @cart.total_price %></h4></td>
+		<td></td>
+		<td><h4>Total:</h4></td>
+		<td><h4><%= number_to_currency(@cart.total_price) %></h4></td>
 		<td></td>
 	</tr>
 </table>
 
+<br>
 <button class="btn btn-info pull-right">Check out</button>
+
+</div></div></div>
